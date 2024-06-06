@@ -30,4 +30,8 @@ public static class Constant
     public readonly static string plusScore = "plus_score";
     public readonly static string notQuit = "not_quit";
     public readonly static string quitRequest = "quit_request";
+    public readonly static string notMainMenu = "not_main_menu";
+    public readonly static string mainMenuRequest = "main_menu_request";
+    public readonly static string notRestart = "not_restart";
+    public readonly static string restartRequest = "restart_request";
 }

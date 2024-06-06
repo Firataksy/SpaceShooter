@@ -33,6 +33,8 @@ public class UI : MonoBehaviour
     public GameObject grayHeart2;
     public GameObject grayHeart3;
     public GameObject quitObjects;
+    public GameObject mainMenuObjects;
+    public GameObject restartObjects;
 
     public int heart = 3;
     public float score;
@@ -175,6 +177,22 @@ public class UI : MonoBehaviour
         if (eg.type == Constant.quitRequest)
         {
             quitObjects.SetActive(true);
+        }
+        if (eg.type == Constant.notMainMenu)
+        {
+            mainMenuObjects.SetActive(false);
+        }
+        if (eg.type == Constant.mainMenuRequest)
+        {
+            mainMenuObjects.SetActive(true);
+        }
+        if (eg.type == Constant.notRestart)
+        {
+            restartObjects.SetActive(false);
+        }
+        if (eg.type == Constant.restartRequest)
+        {
+            restartObjects.SetActive(true);
         }
     }
 
