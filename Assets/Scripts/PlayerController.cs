@@ -81,6 +81,7 @@ public class PlayerController : MonoBehaviour
         {
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(-90, 90, -180), Time.deltaTime * 5);
         }
+
         Vector3 moveDirection = new Vector3(horizontalInput, 0f, 0f);
         transform.Translate(moveDirection * DifficultySelect.selected.playerSpeed * Time.deltaTime, 0f);
 
