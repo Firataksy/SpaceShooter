@@ -34,4 +34,5 @@ public static class Constant
     public readonly static string mainMenuRequest = "main_menu_request";
     public readonly static string notRestart = "not_restart";
     public readonly static string restartRequest = "restart_request";
+    public readonly static string pauseActive = "pause_active";
 }

@@ -26,35 +26,48 @@ public class GameButtonClicks : MonoBehaviour
     {
         EventGame quitRequest = new(Constant.quitRequest, 0, 0);
         GameEvent.Raise(quitRequest);
+
+        EventGame pause_active = new(Constant.pauseActive, 1, 0);
+        GameEvent.Raise(pause_active);
     }
     public void MainMenuRequest()
     {
         EventGame mainMenuRequest = new(Constant.mainMenuRequest, 0, 0);
         GameEvent.Raise(mainMenuRequest);
+
+        EventGame pause_active = new(Constant.pauseActive, 1, 0);
+        GameEvent.Raise(pause_active);
     }
     public void RestartRequest()
     {
         EventGame restartRequest = new(Constant.restartRequest, 0, 0);
         GameEvent.Raise(restartRequest);
+
+        EventGame pause_active = new(Constant.pauseActive, 1, 0);
+        GameEvent.Raise(pause_active);
     }
     public void CancelQuit()
     {
         EventGame cancelQuit = new(Constant.notQuit, 0, 0);
         GameEvent.Raise(cancelQuit);
+
+        EventGame pause_active = new(Constant.pauseActive, 0, 0);
+        GameEvent.Raise(pause_active);
     }
     public void CancelMainMenu()
     {
         EventGame cancelMainMenu = new(Constant.notMainMenu, 0, 0);
         GameEvent.Raise(cancelMainMenu);
+
+        EventGame pause_active = new(Constant.pauseActive, 0, 0);
+        GameEvent.Raise(pause_active);
     }
     public void CancelRestart()
     {
         EventGame cancelRestart = new(Constant.notRestart, 0, 0);
         GameEvent.Raise(cancelRestart);
-    }
-    public void ResumeGame()
-    {
-        EventGame resumed = new(Constant.playGame, 0, 0);
-        GameEvent.Raise(resumed);
+
+        EventGame pause_active = new(Constant.pauseActive, 0, 0);
+        GameEvent.Raise(pause_active);
     }
 }

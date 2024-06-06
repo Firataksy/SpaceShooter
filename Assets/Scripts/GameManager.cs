@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     public bool menuStatus = false;
     public bool gamePaused;
     public bool resumeGame;
+    public bool pauseControl;
 
     public int score;
     private int maxAmmo;
@@ -35,6 +36,7 @@ public class GameManager : MonoBehaviour
     void OnEnable()
     {
         score = 0;
+        pauseControl = false;
         GameEvent.RegisterListener(EventListener);
     }
 
@@ -60,7 +62,7 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        if (Input.GetKeyUp(KeyCode.Escape))
+        if (Input.GetKeyUp(KeyCode.Escape) && !pauseControl)
         {
             bool lastState = gamePaused;
             gamePaused = !gamePaused;
@@ -215,6 +217,17 @@ public class GameManager : MonoBehaviour
         if (gameOver)
         {
             return;
+        }
+        if (eg.type == Constant.pauseActive)
+        {
+            if (eg.value == 1)
+            {
+                pauseControl = true;
+            }
+            if (eg.value == 0)
+            {
+                pauseControl = false;
+            }
         }
         if (eg.type == Constant.playerHit)
         {
