@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   difficultyType: 1
   enemySpeed: 350
-  playerSpeed: 700
+  playerSpeed: 800
   bulletSpeed: 450
   enemySpawnCD: 1.5
   ammoBoxSpawnTime: 15
